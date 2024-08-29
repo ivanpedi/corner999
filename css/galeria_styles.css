@@ -1,0 +1,302 @@
+/* ======================================================= ESTILOS PARA LA GALERIA DE IMAGENES DEL MAIN ======================================================== */
+/* ======================================================= ESTILOS PARA LA GALERIA DE IMAGENES DEL MAIN ======================================================== */
+/* ======================================================= ESTILOS PARA LA GALERIA DE IMAGENES DEL MAIN ======================================================== */
+main {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    flex: 1;
+}
+
+body {
+    background: #f1f1f1 !important;
+}
+
+.container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+/* =========== BOTONES ========== */
+/* =========== BOTONES ========== */
+/* =========== BOTONES ========== */
+/* Botones en 4 columnas */
+#filter-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#filter-buttons .btn_gal {
+    border-radius: 5px;
+    background: linear-gradient(45deg, #f48646, #e9d11e);
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    font-size: 35px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+    transition: all 0.3s ease;
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+#filter-buttons .btn_gal:hover {
+    background: linear-gradient(45deg, #868483, #d1cfcf);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    color: white;
+}
+
+#filter-buttons .btn_gal.active {
+    background: linear-gradient(45deg, #868483, #d1cfcf);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+    border: 5px solid #222;
+    transform: scale(1.05);
+    color: white;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    
+    
+}
+
+/*================= TARJETAS ================ */
+/*================= TARJETAS ================ */
+/*================= TARJETAS ================ */
+
+/* Asegura que las tarjetas estén en un grid con 4 columnas */
+#filterable-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    justify-content: center;
+    width: 70%;
+    margin-bottom: 100px;
+}
+
+#filterable-cards .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto de despliegue al pasar el ratón sobre la tarjeta */
+#filterable-cards .card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#filterable-cards .card.hide {
+    display: none;
+}
+
+/* Tarjetas en 2 filas y 4 columnas */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 15px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Ajustes adicionales para la tarjeta */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.card-title {
+    font-size: 40px;
+    color: white;
+    
+}
+
+.card-text {
+    font-size: 40px;
+    color: white;
+    
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    background: linear-gradient(45deg, #868483, #d1cfcf);
+}
+
+/* Estilos para el modal IMAGENES DE GALERIA HECER ZOOM */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    max-width: 90%;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Estilos para el botón de cerrar del modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width:768px) {
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+        
+    }
+
+    #filterable-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 60px;
+        justify-content: center;
+        width: 70%;
+        margin-bottom: 100px;
+    }
+    #filter-buttons {
+        flex-direction: column;
+        align-items: stretch; /* Alinea los botones en el eje vertical */
+    }
+    #filter-buttons .btn_gal {
+        font-size: 30px; /* Tamaño de fuente más pequeño */
+        padding: 15px; /* Ajusta el tamaño del padding */
+        margin: 10px 30px; /* Espacio vertical entre botones */
+        font-weight: bold;
+    }
+    
+    
+}
+
+
+
+
+/* Estilos para la secondary-nav */
+.secondary-nav {
+    width: 100%;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #ffcc33);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    display: none; 
+}
+
+.secondary-nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+    list-style-type: none;
+}
+
+.secondary-nav ul li {
+    margin: 0 10px;
+}
+
+.secondary-nav ul li a {
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+    font-size: 35px;
+    padding: 8px 15px;
+    margin-left: 50px;
+    border-radius: 5px;
+    background-color: rgb(161, 161, 161);
+}
+.secondary-nav ul li a:hover {
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgb(67, 67, 67), rgb(130, 129, 129), rgb(200, 199, 199));
+
+}
+.secondary-nav a.active {
+    border: 5px solid black;  
+    border-radius: 5px;         
+    padding: 5px 10px;          
+    color: #ffffff;             
+    background: linear-gradient(90deg, rgb(67, 67, 67), rgb(130, 129, 129), rgb(200, 199, 199));
+}
+
+.secondary-nav.sticky {
+    display: block;
+    top: 60px; 
+}
+@media (max-width:768px){
+    .secondary-nav {
+        width: 100%;
+        background: linear-gradient(90deg, #ff7e5f, #feb47b, #ffcc33);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 900;
+        display: none; 
+    }
+    .secondary-nav ul li a {
+        text-decoration: none;
+        color: white; 
+        font-weight: bold;
+        font-size: 17px;
+        padding: 8px 15px;
+        margin-left: 0;
+        border-radius: 5px;
+        background-color: rgb(161, 161, 161);
+    }
+}

@@ -1,0 +1,135 @@
+/* ============== ESTILOS PARA LA IMAGEN DE PORTADA TEMPORADA DE VERANO============== */
+/* ============== ESTILOS PARA LA IMAGEN DE PORTADA TEMPORADA DE VERANO============== */
+/* ============== ESTILOS PARA LA IMAGEN DE PORTADA TEMPORADA DE VERANO============== */
+/* Estilos para la imagen de portada TEMPORADA DE VERANO*/
+#tempVerano {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0;
+}
+/* Para la img en particular */
+#tempVerano img{
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    
+}
+/* ============== ESTILOS TEXTOS INFORMATIVOS ============== */
+/* ============== ESTILOS TEXTOS INFORMATIVOS ============== */
+/* ============== ESTILOS TEXTOS INFORMATIVOS ============== */
+.envioGrat {
+    font-size: 40px;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 50px;
+    margin-right: 100px;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+/* ============== ESTILOS CARRUSEL ============== */
+/* ============== ESTILOS CARRUSEL ============== */
+/* ============== ESTILOS CARRUSEL ============== */
+#carouselExampleAutoplaying {
+    margin-bottom: 100px;
+}
+/* ============== ESTILOS TARJETAS DE NOTICIAS ============== */
+/* ============== ESTILOS TARJETAS DE NOTICIAS ============== */
+/* ============== ESTILOS TARJETAS DE NOTICIAS ============== */
+/* Estilos texto ultimas noticias */
+#ultNot {
+    font-size: 40px;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 50px;
+    margin-right: 100px;
+    text-align: center;
+    margin: 50px;
+}
+/* Estilo para el contenedor de noticias */
+#news-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+/* Estilo para las tarjetas de noticias */
+.news-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 50px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 20px;
+}
+/* Estilo para las imagenes de las tarjetas de noticias */
+.news-card img {
+    width: 80%;
+    height: auto;
+    margin-left: 60px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+/* Estilo para el contenedor del botón dentro de la tarjeta de noticias */
+.news-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+/* Estilo para los botones dentro de las tarjetas de noticias */
+.news-card .btn-primary {
+    color: black;
+    background-color: #e9771a;
+    border-color: #f9f9fa;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+/* Estilo para el hover de los botones dentro de las tarjetas de noticias */
+.news-card .btn-primary:hover {
+    background-color: #080808;
+    border-color: #fcfcfc;
+    color: #e9771a;
+}
+/* Estilos para llenar el espacio disponible entre header y footer */
+main {
+    flex: 1;
+}
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .envioGrat {
+        font-size: 25px;
+        font-family: "Bungee Spice", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-left: 50px;
+        margin-right: 100px;
+        text-align: center;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+    /* Ajustar el contenedor de las noticias para que las tarjetas ocupen el 100% del ancho */
+    #news-container {
+        grid-template-columns: 1fr; 
+    }
+
+    /* Centrar las imágenes dentro de las tarjetas */
+    .news-card img {
+        width: 100%; 
+        margin-left: 0;
+        margin-right: 0; 
+        margin-top: 15px; 
+    }
+}
